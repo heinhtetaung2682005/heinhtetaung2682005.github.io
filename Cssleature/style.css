@@ -1,0 +1,17 @@
+h1{
+    color: blue;
+    text-transform:capitalize;
+
+}
+
+p{
+    color: rgb(0, 255, 42);
+}
+
+small{
+    color: red;
+    text-transform: uppercase;
+    word-spacing: 20px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
