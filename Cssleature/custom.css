@@ -1,0 +1,136 @@
+/* universal selector */ */
+*{
+    /* color: red; */
+    margin: 0;
+    padding: 0;
+ }
+/* tag selector or element selector */
+/* h1{
+    color:blue;
+    text-align: center;
+}
+
+/* attribute selector */
+/* a[title="facebook"]{
+    color:green;
+}
+
+/* idselector */
+#idselector{
+    color: blue;
+    font-size: 40px;
+}
+
+/* class selector */
+
+.classselector{
+    color: brown;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-indent: 50px;
+
+} 
+
+/* Descendant Selector */
+.desc a{
+    color: red;
+}
+
+/* Child Selector */
+.child > a{
+    color:green;
+}
+
+/* Pseudo */
+a:link {
+    color: green;
+    letter-spacing: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    letter-spacing: 10px;
+}
+
+a:active{
+    color: yellow;
+    font-size: 20px;
+
+}
+
+a:visited{
+    color: rgb(247, 159, 26);
+}
+
+/* target */
+:target{
+    color:red;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+/* Border */
+.borderOne{
+    border: 2px double green;
+}
+
+.borderTwo{
+    border-top: 5px solid red;
+    /* border-bottom: 5px solid red;
+    border-left: 5px solid red;
+    border-right: 5px solid red; */
+}
+
+/* border with */
+.borderThree{
+    border-style: double;
+    /* border-width: 10px; */
+    /* T,R,B,L */
+/* border-width: 5px 50px;    */
+ /*T&B , L&R  */
+ /* border-width: 5px 10px 50px; */
+ /* T, L&R, B */
+ border-width: 5px 10px 15px 20px;
+ /* T,R,B,L */
+}
+
+/* borderStyle */
+.borderFour{
+    border-style: solid double dotted dashed;
+    border-width: 5px;
+    border-color: green yellow red blue;
+}
+
+h1{
+    text-align: center;
+    color: red;
+}
+ /* margin */
+.marginOne{
+    border: 2px solid red;
+    /* margin: 50px 0px 0px 0px */
+    margin-top: 50px;
+    
+}
+
+/* padding */
+.paddingOne{
+    border: 2px solid red;
+    /* padding: 50px; */
+    padding-left: 50px;
+
+}
+
+.Inline{
+    border: 2px solid red;
+    width: 300px;
+    display: inline-block;
+}
+
+.block{
+    border: 2px solid green;
+    width: 300px;
+    display: inline-block;
+}
