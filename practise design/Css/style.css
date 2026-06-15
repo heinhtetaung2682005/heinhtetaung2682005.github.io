@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+
+}
+
+.navber{
+    display: flex;
+    justify-content: space-between;
+    background: #222;
+    align-items: center;
+    padding: 20px 50px;
+    color: orange;
+
+}
+
+.navber-menum{
+    display: flex;
+    list-style: none;
+}
+
+.naver-menum-child{
+    margin-left: 20px;
+}
+
+.naver-menum-child, a{
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+
+ .Contact{
+    text-decoration: underline;
+
+
+}
+.Contact:hover{
+    text-decoration: underline;
+    color: orange;
+}
+
+.naver-menum-child,a:hover{
+    color: orange;    
+}
+
+/* Hero */
+.Hero{
+    height: 90vh;
+    
+}

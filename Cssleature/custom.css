@@ -134,3 +134,140 @@ h1{
     width: 300px;
     display: inline-block;
 }
+
+/* float right */
+
+.Float_right_image{
+    width: 300px;
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.Float_left_image{
+    float: left;
+    width: 300px;
+}
+
+/* flex */
+
+.flex{
+    display: flex;
+    background-color: aquamarine;
+    align-items: center;
+    flex-direction: row;
+    /* justify-content: center; */
+    height: 100px;
+
+
+}
+/* grid */
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-columns: auto auto auto; */
+    color: #FFFFFF;
+    /* grid-row-gap: 40px; */
+    /* grid-coloum-gap: 30px; */
+    /* grid-gap:30px; */
+
+}
+
+.grid_child , .grid div{
+    padding: 20px;
+    text-align: center;
+}
+.row_add{
+    grid-column-start:2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.column_add{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/* media queries */
+.media{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20px;
+}
+
+.media img{
+    width: 100%;
+}
+
+@media screen and (min-width: 768px){
+    .media{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .media{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+/* position */
+.position_relartive{
+    border: 2px solid red;
+    width: 1000px;
+    height: 500px;
+}
+.position_relartive_child{
+    border: 2px solid green;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    /* top button left right */
+    top: 50px;
+    left:50px;
+}
+
+.position_absolution{
+    border: 2px solid rgb(0, 255, 64);
+    width: 1000px;
+    height: 500px;
+    position: relative;
+}
+
+.position_absolution_child{
+    border: 2px solid orangered;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+.fixed{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+/* font */
+.online_font{
+font-family: "Ole", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* offline_font */
+@font-face {
+    font-family: "abc";
+    src: url("font/BlackOpsOne-Regular.ttf");
+}
+
+.offline_font{
+    font-family: "abc";
+}
+
+
+
