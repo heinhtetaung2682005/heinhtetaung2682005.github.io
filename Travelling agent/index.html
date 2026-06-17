@@ -1,22 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen Go | Modern Travel Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <img src="images/Untitled design.png" alt="travelling agent" class="Logo">
-        <ul class="nav-menu">
-            <li><a href="">Home</a></li>
-            <li><a href="">Popular</a></li>
-            <li><a href="">Package</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li class="nav-button"><a href="">Get Started</a></li>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="logo" href="#home" aria-label="Zen Go home">
+        <span class="logo-mark">ZG</span>
+        <span class="logo-text">Zen Go</span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+      <label class="menu-button" for="nav-toggle" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#login">Login</a></li>
         </ul>
+        <a class="btn btn-primary nav-cta" href="#packages">Get Started</a>
+      </div>
     </nav>
+  </header>
+
+  <main>
+    <!-- Hero follows the supplied reference: dark travel banner with overlapping imagery. -->
+    <section class="hero" id="home">
+      <div class="hero-map" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Travel, enjoy and live a new and full life</p>
+          <h1>Best Destinations Around the World</h1>
+          <p class="hero-copy">Build lifelong memories with expertly planned trips, handpicked stays, and unforgettable local experiences across the globe.</p>
+          <a class="btn btn-yellow" href="#packages">Book Now</a>
+        </div>
+
+        <div class="hero-gallery" aria-label="Featured travel photos">
+          <div class="flight-path" aria-hidden="true"></div>
+          <img class="hero-photo hero-photo-small" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80" alt="Traveler walking beside a blue lake">
+          <img class="hero-photo hero-photo-large" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Traveler overlooking a turquoise coastline">
+        </div>
+      </div>
+    </section>
+
+    <!-- Service cards are intentionally compact so the row matches the screenshot on desktop. -->
+    <section class="section services" id="about">
+      <div class="container">
+        <div class="section-heading center">
+          <h2>We Offer Best Services</h2>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon">☀</span>
+            <h3>Calculated Weather</h3>
+            <p>Plan around clear forecasts and seasonal guidance for comfortable travel.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">✈</span>
+            <h3>Best Flights</h3>
+            <p>Compare smart routes, flexible timings, and value-focused flight options.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">♙</span>
+            <h3>Local Events</h3>
+            <p>Discover festivals, cultural moments, and hidden city experiences.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">▣</span>
+            <h3>Customization</h3>
+            <p>Shape every itinerary around your pace, budget, and travel style.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section destinations" id="destinations">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Popular Destinations</h2>
+        </div>
+
+        <div class="destination-grid">
+          <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?auto=format&fit=crop&w=900&q=80" alt="Osaka castle in Japan">
+            <div class="destination-overlay">
+              <h3>Japan</h3>
+              <p>Heritage, gardens, and city lights</p>
+            </div>
+          </article>
+          <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=900&q=80" alt="Colorful canal in Venice">
+            <div class="destination-overlay">
+              <h3>Italy</h3>
+              <p>Canals, cuisine, and classic romance</p>
+            </div>
+          </article>
+          <article class="destination-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Tropical beach with turquoise water">
+            <div class="destination-overlay">
+              <h3>Maldives</h3>
+              <p>Blue lagoons and island calm</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Popular Packages</h2>
+        </div>
+
+        <div class="package-grid">
+          <article class="package-card">
+            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80" alt="Limestone cliffs and calm water in Thailand">
+            <div class="package-body">
+              <h3>Krabi Islands, Thailand</h3>
+              <p>5 days, beach resort, island hopping, guided transfers</p>
+              <div class="package-meta">
+                <span>$899</span>
+                <a class="btn btn-small" href="#contact">Book Now</a>
+              </div>
+            </div>
+          </article>
+          <article class="package-card">
+            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=800&q=80" alt="Sydney harbor in Australia">
+            <div class="package-body">
+              <h3>Sydney Escape, Australia</h3>
+              <p>6 days, city tour, harbor cruise, coastal walk</p>
+              <div class="package-meta">
+                <span>$1,240</span>
+                <a class="btn btn-small" href="#contact">Book Now</a>
+              </div>
+            </div>
+          </article>
+          <article class="package-card">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" alt="Red torii gates in Kyoto">
+            <div class="package-body">
+              <h3>Kyoto Culture, Japan</h3>
+              <p>10 days, temples, food walks, bullet train pass</p>
+              <div class="package-meta">
+                <span>$1,690</span>
+                <a class="btn btn-small" href="#contact">Book Now</a>
+              </div>
+            </div>
+          </article>
+          <article class="package-card">
+            <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=800&q=80" alt="Hot air balloons in Cappadocia">
+            <div class="package-body">
+              <h3>Cappadocia, Turkey</h3>
+              <p>10 days, cave hotel, balloon view, local tours</p>
+              <div class="package-meta">
+                <span>$1,090</span>
+                <a class="btn btn-small" href="#contact">Book Now</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Four-step booking flow with a supporting traveler visual. -->
+    <section class="section how" id="how-it-works">
+      <div class="container how-grid">
+        <div class="steps">
+          <div class="section-heading center-mobile">
+            <h2>How It Works?</h2>
+          </div>
+          <ol class="step-list">
+            <li>
+              <h3>Find your Destination</h3>
+              <p>Choose from curated destination lists and browse trips by season, region, or mood.</p>
+            </li>
+            <li>
+              <h3>Choose your Package</h3>
+              <p>Select the itinerary that fits your budget, schedule, and travel goals.</p>
+            </li>
+            <li>
+              <h3>Choose your Date</h3>
+              <p>Pick available dates and confirm the pace, add-ons, and details you need.</p>
+            </li>
+            <li>
+              <h3>Book Now</h3>
+              <p>Complete booking in just a few steps and get ready for a memorable escape.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="traveler-panel">
+          <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=900&q=80" alt="Two travelers with luggage preparing for a trip">
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog" id="blog">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Our Blogs</h2>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80" alt="Mountain village travel view">
+            <div class="blog-body">
+              <h3>Travel Blog</h3>
+              <p>Fresh ideas for scenic escapes, flexible planning, and slower journeys.</p>
+              <a class="btn btn-small" href="#contact">Read More</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Luxury resort room for travel inspiration">
+            <div class="blog-body">
+              <h3>Travel Blog</h3>
+              <p>How to choose memorable stays without losing comfort or convenience.</p>
+              <a class="btn btn-small" href="#contact">Read More</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <img src="https://images.unsplash.com/photo-1504173010664-32509aeebb62?auto=format&fit=crop&w=900&q=80" alt="Wildlife travel experience">
+            <div class="blog-body">
+              <h3>Travel Blog</h3>
+              <p>Responsible wildlife travel tips for nature-first adventure seekers.</p>
+              <a class="btn btn-small" href="#contact">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo footer-logo" href="#home">
+          <span class="logo-mark">ZG</span>
+          <span class="logo-text">Zen Go</span>
+        </a>
+        <p>Modern travel planning for inspired travelers, families, and teams ready to see more of the world.</p>
+        <div class="social-links" aria-label="Social media links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="#" aria-label="Twitter">x</a>
+          <a href="#" aria-label="YouTube">▶</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Destinations</h3>
+        <ul>
+          <li><a href="#destinations">Japan</a></li>
+          <li><a href="#destinations">Europe</a></li>
+          <li><a href="#destinations">Thailand</a></li>
+          <li><a href="#destinations">India</a></li>
+          <li><a href="#destinations">Indonesia</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Our Services</h3>
+        <ul>
+          <li><a href="#about">Flights</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+          <li>25 Skyline Avenue</li>
+          <li><a href="tel:+9595559244">+959 555 9244</a></li>
+          <li><a href="mailto:reservation@zengo.com">reservation@zengo.com</a></li>
+          <li><a href="mailto:contact@zengo.com">contact@zengo.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright © 2026 Zen Go. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
