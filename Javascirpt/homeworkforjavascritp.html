@@ -8,16 +8,39 @@
   <body>
     <h1>Homework</h1>
     <script>
-      let num1 = Number(prompt("Enter first number:"));
-      let num2 = Number(prompt("Enter second number:"));
+      let choice;
 
-      let result = 0;
+while (true) {
+    choice = prompt("Choose (+, -, *, /) or q to quit:");
 
-      for (let i = 1; i <= num2; i++) {
-        result += num1;
-      }
+    if (choice === "q") {
+        break;
+    }
 
-      console.log("Answer = " + result);
+    let num1 = Number(prompt("Enter first number:"));
+    let num2 = Number(prompt("Enter second number:"));
+
+    let result;
+
+    switch (choice) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            result = num1 / num2;
+            break;
+        default:
+            result = "Invalid Operator";
+    }
+
+    console.log(num1 + " " + choice + " " + num2 + " = " + result);
+}
     </script>
   </body>
 </html>
