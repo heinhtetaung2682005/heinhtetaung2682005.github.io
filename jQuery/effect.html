@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+</head>
+<body>
+    <p>
+        Hello this is jQuery lessons. This is a simple example of how to use jQuery to manipulate the DOM. You can add your own content and see how it changes dynamically.
+    </p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="fade-out">Fade Out</button>
+    <button id="fade-in">Fade In</button>
+    <button id="fade-toggle">Fade Toggle</button>
+    <button id="fade-to">Fade To</button>
+    <button id="fade-origin">Fade Origin</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#hide').click(function(){
+                $('p').hide(3000);//hide(3000) means hide the paragraph in 3 seconds
+            })
+            $('#show').click(function(){
+                $('p').show(3000);//show(3000) means show the paragraph in 3 seconds
+            })
+            $('#toggle').click(function(){
+                $('p').toggle(3000);//toggle(3000) means toggle the paragraph in 3 seconds
+            })
+            $('#fade-in').click(function(){
+                $('p').fadeIn(3000);//fadeIn(3000) means fade in the paragraph in 3 seconds
+            })
+            $('#fade-out').click(function(){
+                $('p').fadeOut(3000);//fadeOut(3000) means fade out the paragraph in 3 seconds
+            })
+            $('#fade-toggle').click(function(){
+                $('p').fadeToggle(3000);//fadeToggle(3000) means fade toggle the paragraph in 3 seconds
+            })
+            $('#fade-to').click(function(){
+                $('p').fadeTo(3000, 0.5);//fadeTo(3000, 0.5) means fade the paragraph to 50% opacity in 3 seconds
+            })
+            $('#fade-origin').click(function(){
+                $('p').fadeTo(3000, 1);//fadeTo(3000, 1) means fade the paragraph to 100% opacity in 3 seconds
+            })
+        })
+    </script>
+</body>
+</html>

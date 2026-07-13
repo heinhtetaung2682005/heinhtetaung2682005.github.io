@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="jquery-4.0.0.min.js"></script>
+    <style>
+        #my-class{
+            max-width:250px;
+            background-color:black;
+            text-align: center;
+            padding:5px 0px;
+            cursor:pointer;
+            margin-bottom: 0;
+        }
+        .welcome{
+            background-color:rgb(70, 66, 66);
+            color:white;
+            text-align: center;
+            padding:50px 0px;
+            margin-top: 0;
+        }
+       
+    </style>
+</head>
+<body>
+    <p id="my-class">Welcome to jQuery!</p>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+    <script>
+        $(document).ready(function(){
+            $('#my-class').mouseover(function(){
+                $(this).addClass('welcome');
+
+            })
+
+            $('#my-class').mouseout(function(){
+                $(this).removeClass('welcome');
+            })
+
+            $('#name').focus(function(){
+                $(this).css('background-color','yellow');
+            })
+
+            $('#name').change(function(){
+                $(this).css('background-color','green');
+                let name = $(this).val();
+                console.log(name);
+            })
+
+            
+        })
+    </script>
+    
+</body>
+</html>

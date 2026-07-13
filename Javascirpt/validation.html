@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Validation</h1>
+
+    <form action="success.html" name="myForm" onsubmit="return formValidation()">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email">
+        <small id="EmailError"></small>
+        <br><br>
+       
+
+        <label for="password" id="password" name="password">Password</label><br>
+        <input type="password" id="password" name="password">
+        <small id="PasswordError"></small>
+         <button type="submit">Login</button>
+         <br><br>
+    </form>
+
+
+    <script>
+
+        function formValidation(){
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            //console.log(email)
+            //cosnole.log(password)
+            if(email ==""){
+                document.getElementById('email').sytle.border = '1px solid red';
+                document.getElementById('EmailError').innerText = 'Email is required';
+                document.getElementById('EmailError').style.color = 'red';
+
+                return false;
+            }else{
+                document.getElementById('email').style.border='1px solid red';
+                document.getElementById('EmailError').innrText = '';
+                
+                return true;
+
+            }
+
+            if(password = ""){
+                document.getElementById('password').style.border = '1px solid red';
+                document.getElementById('PasswordError').innerText = 'Password is required';
+                document.getElementById('PasswordError').style.color = 'red';
+                return false;
+            }else{
+                document.getElementById('password').style.border = '1px solid red';
+                document.getElementById('PasswordError').innerText = '';
+                
+                return true
+            }
+
+        }
+
+    </script>
+</body>
+</html>

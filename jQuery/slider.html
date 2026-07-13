@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-4.0.0.min.js"></script>
+    <style>
+        #click-me{
+            max-width:250px;
+            background-color:black;
+            text-align: center;
+            padding:5px 0px;
+            cursor:pointer;
+            margin-bottom: 0;
+        }
+        #panel{
+            max-width:250px;
+            background-color:rgb(70, 66, 66);
+            color:white;
+            text-align: center;
+            padding:50px 0px;
+            margin-top: 0;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <p id="click-me">Click me!</p>
+    <p id="panel">Hello slider</p>
+
+    <script>
+        $(document).ready(function(){
+            $('#click-me').click(function(){
+                $('#panel').slideDown(3000);//slideToggle(3000) means slide toggle the panel in 3 seconds
+            })
+            $('#click-me').click(function(){
+                $('#panel').slideUp(3000);//slideToggle(3000) means slide toggle the panel in 3 seconds
+            })
+            $('#click-me').click(function(){
+                $('#panel').slideToggle(3000);//slideToggle(3000) means slide toggle the panel in 3 seconds
+            })
+        })
+    </script>
+</body>
+</html>
