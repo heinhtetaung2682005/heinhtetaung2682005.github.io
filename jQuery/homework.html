@@ -21,6 +21,20 @@
         </select><br><br>
         <button id="add">Add Student</button>
     </div>
+    // Update Student Form
+    <div id="updateStudent">
+        <h3>Update Student</h3>
+        Name : <input type="text" name="name" id="upd_name" ><br><br>
+        Email: <input type="email" name="email" id="upd_email"><br><br>
+        Phone: <input type="number" name="phone" id="upd_phone"><br><br>
+        Year: <select name="year" id="upd_year">
+            <option value="">Choose Year</option>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+        </select><br><br>
+        <button id="update">Update Student</button>
+    </div>
 
     <h3>Students List</h3>
     <table border="1" cellspacing="0" cellpadding="20">
@@ -51,6 +65,7 @@
 
     <script>
         $(document).ready(function(){
+            $('#updateStudent').hide();
             //
             $('#add').click(function(){
                 //input ထဲက data တစ်ခုချင်းစီကိုယ်လက်ခံ
@@ -95,6 +110,47 @@
                 let studentString = JSON.stringify(studnetArray);
                 console.log(studentString);
                 localStorage.setItem('students_key',studentString);
+
+                function getData(){
+                    let studentData = localStorage.getItem('students_key');
+                    let studnetArray = JSON.parse(studentData);
+                    console.log(studnetArray);
+
+                    let html = '';
+                    for(let i=0; i<studnetArray.length; i++){
+                        html += `<tr>
+                                    <td>${i+1}</td>
+                                    <td>${studnetArray[i].stu_name}</td>
+                                    <td>${studnetArray[i].stu_email}</td>
+                                    <td>${studnetArray[i].stu_phone}</td>
+                                    <td>${studnetArray[i].stu_year}</td>
+                                    <td>
+                                        <button>Delete</button>
+                                        <button>Edit</button>
+                                    </td>
+                                </tr>`;
+                    }
+                    $('#tbody').html(html);
+                    //for delete button
+                    $('#tbody button:first-child').click(function(){
+                        let index = $(this).parent().parent().index();
+                        console.log(index);
+                        studnetArray.splice(index,1);
+                        let studentString = JSON.stringify(studnetArray);
+                        localStorage.setItem('students_key',studentString);
+                        getData();
+                    })
+                    //for edit button
+                    $('#tbody button:last-child').click(function(){
+                        let index = $(this).parent().parent().index();
+                        console.log(index);
+                        $('#updateStudent').show();
+                        $('#upd_name').val(studnetArray[index].stu_name);
+                        $('#upd_email').val(studnetArray[index].stu_email);
+                        $('#upd_phone').val(studnetArray[index].stu_phone);
+                        $('#upd_year').val(studnetArray[index].stu_year);
+                    })
+                }
             
            
                 
